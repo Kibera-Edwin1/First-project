@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Appointments</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>Appointment</h2>
+        <form action="/appointments" method="POST" name="appointments">
+            <div class="view">
+                <table>
+                    <tr>
+                        <th>Surname</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Gender</th>
+                        <th>EmailAddress</th>
+                        <th>PhoneNumber</th>
+                        <th>Country</th>
+                        <th>County</th>
+                        <th>Town</th>
+                        <th>Address</th>
+                        <th>NextofkinLastname</th>
+                        <th>NextofKinFirstname</th>
+                        <th>PhoneNumber</th>
+                        <th>EmailAddress</th>
+                        <th>Address</th>
+                        <th>Medication</th>
+                    </tr>
+
+                    <tbody id="dataArea"></tbody>
+
+                </table>
+            </div>
+        </form>
+
+        <script>
+            function getData(){
+                fetch('/Appointments')
+
+                .then(response =>{
+                    return response.json();
+                })
+
+                .then(data =>{
+                    console.log(data);
+                    let html="";
+                    if(data.length >0){
+                        data.map((row)=>{
+                            html += `
+                            
+                            <tr>
+                                <td>${row._id}</td>
+                                <td>${row.surname}</td>
+                                <td>${row.firstName}</td>
+                                <td>${row.lastName}</td>
+                                <td>${row.gender}</td>
+                                <td>${row.emailAddress}</td>
+                                <td>${row.phoneNumber}</td>
+                                <td>${row.Country}</td>
+                                <td>${row.County}</td>
+                                <td>${row.Town}</td>
+                                <td>${row.Address}</td>
+                                <td>${row.nextOfKinLastName}</td>
+                                <td>${row.nextOfKinFirstName}</td>
+                                <td>${row.phoneNumber}</td>
+                                <td>${row.emailAddress}</td>
+                                <td>${row.medication}</td>
+                                
+                                </tr>
+                                `;
+                        });
+                    }else{
+                        html = "<tr> td colspan = '4' class= 'text-center'>No Data Found </td></tr>";
+                    }
+                    document.getElementById("dataArea").innerHTML=html;
+                });
+            }
+
+            getData();
+        </script>
+    </body>
+</html>

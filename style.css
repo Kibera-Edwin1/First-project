@@ -1,149 +1,280 @@
-.signup{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "poppins",sans-serif;
-}
 h1{
-    font-size: 2rem;
-    color: #666;
-    margin-bottom: 1.2rem;
+    color:blue;
+    font-family:Helvetica neue,Helvetica,Arial,sans-serif;
+   
 }
-.wrapper{
-    width: 330px;
-    padding: 2rem 1rem;
-    margin:50px auto;
-    background-color: #ffff;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 20px 35px rgba(0,0,0.1);
+
+
+header{
+    background-color:green;
+    background-image:("pic.jpg");
+    padding:40px;
+    height:400px;
+    width:1000px; 
+
 }
-#input{
-    width: 92%;
-    outline: none;
-    border: 1px solid #ffff;
-    padding: 12px 20px; 
-    margin-bottom: 10px; 
-    border-radius: 20px; 
-    background: #e4e4e4;
-}
-.wrap{
-    border-radius: 20px;
-    font-size: 1rem;
-    margin-top: 1.8rem;
-    padding: 10px 0;
-    outline: none;
-    border: none;
-    width: 90%;
-    color: #ffff;
-    cursor: pointer;
-    background: rgb(17, 107, 143);
-}
-button:hover{
-    background:rgba(17, 107, 143, 0.877)
-}
-input:focus{
-    border: 1px solid rgb(192, 192, 192);
-}
-.login{
-    width: 370px;
-    padding: 2rem 1rem;
-    margin:50px auto;
-    background-color: #ffff;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 20px 35px rgba(0,0,0.1); 
-}
-.group{
-    background-color: blueviolet;
-    width:100%;
-    justify-content: center;
-}
-nav{
+ul{
     margin:0;
     padding:0;
-    list-style-type: none;
-    display: flex;
-    text-decoration: none;
-    justify-content: space-between ;
-    height:5%;
-    background-color: blueviolet;
-
-    
-
+    list-style-type:none;
 }
-body{
-    background-color: skyblue;
+li{
+    display:inline-block;
+    margin-right:20px;
 }
-.container{
+
+footer{
+    background:black;
+    padding:10px 20px;
+}
+.main{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px
+    rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    width: 500px;
+    text-align: center;
     display:block;
-   border-radius: 10%;
-   max-height: max-content;
-   max-width: max-content;
-    align-items: center;
-    margin: auto;
-    
-    
-
 }
-#serial{
-    width: 700px;
-    height:35px;
-    border-radius: 5px;
+h1{
+    color: #4caf50;
 }
-#model{
-    width: 700px;
-    height: 35px;
-    border-radius: 5px;
-}
-#device{
-    width: 700px;
-    height: 35;
-    border-radius: 5px;
-}
-#status{
-    width: 700px;
-    height: 35px;
-    border-radius: 5px;
-}
-#dep{
-    width: 700px;
-    height: 35px;
-    border-radius: 5px;
-}
-#floor{
-    width: 700px;
-    height: 35px;
-    border-radius: 5px;
-}
-input:hover{
-    background-color:beige ;
-}
-select:hover{
-    background-color:beige ;
-}
-h2{
-    color: blue;
-}
-table{
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    min-width: 400px;
-}
-.view table tr{
-    background-color: aqua;
-    font-weight: bold;
+label{
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
     text-align: left;
+    color: #555;
+    font-weight: bold;
+}
+input{
+    display: inline-block;
+    width: 20%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+button{
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #4caf50;
+    width: 100%;
+    font-size: 16px;
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup{
+    display:block;
+    background-color:white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px
+    rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    width: 400px;
+    height:400px;
+    text-align: center;
 }
 
-.view th,
-.view td {
-    padding: 12px 15px;
+.PersonalDetails{
+    background-color:white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px
+    rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    width: 300px;
+    height: 50px;
+    
 }
-.view tbody tr{
-    border-bottom: 1px solid #dddd;
+
+.medicalissues{
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
 }
-.dash{
-    background-color: rgb(138, 194, 194);
+#menu{
+    background: #111827;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#menu.logo{
+    display: flex;
+    align-items: center;
+    color: #ffff;
+    padding: 30px 0 0 30px;
+}
+#menu.logo img{
+    width: 40px;
+    margin-right:15px;
+}
+.items {
+    margin-top: 40px;
+    font-display:grid;
+    grid-template-columns: 14rem auto 14rem;
+}
+#menu .items li{
+    list-style:none;
+    padding: 15px 0;
+    transition: 0.3s ease;
+    display:block;
+
+}
+#menu .items li:hover{
+    background: #253047;
+    cursor: pointer;
+}
+#menu .items li:nth-child(1){
+    border-left: 4px solid #fff;
+}
+#menu .items li i{
+    color: rgb(134, 141, 151);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 10px 0 25px;
+
+}
+#menu .items li:hover i,
+#menu .items li:hover a{
+    color:#f3f4f6;
+}
+#menu .items li a{
+    text-decoration: none;
+    color: rgb(134, 141, 151);
+    font-weight: 300px;
+    transition: 0.3s ease;
+}
+#interface{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    position: relative;
+}
+#interface .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px 30px;
+    border-bottom: 3px solid #594ef7;
+    position: fixed;
+    width: calc(100% - 300px);
+
+}
+#interface .navigation .search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    padding: 10px 14px;
+    border:1px solid #d7dbe6;
+    border-radius: 2px;
+}
+#interface .navigation .search i{
+    margin-left: 10px;
+}
+#interface .navigation .search input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+#interface .navigation .profile i{
+    margin-right: 20px;
+    font-size: 19px;
+    font-weight: 400;
+}
+#interface .navigation .profile img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.i .name {
+    color: #444a53;
+    padding: 30px 30px 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 70px;
+}
+.board{
+    width: 94%;
+    margin: 30px 0 30px 30px;
+    overflow: auto;
+    background: #fff;
+    border-radius: 8px;
+    
+}
+.board img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.board h5{
+    font-weight: 600;
+    font-size: 14px;
+}
+.board p{
+    font-weight: 400;
+    font-size: 13px;
+    color: #787d8d;
+} 
+.board .people {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+}
+
+.patients{
+    background:#a5b8e0;
+    margin-left: 295px;
+    display:block;
+    width:100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 50px 10px;
+    
+}
+.Doctors{
+    background:#a5b8e0;
+    margin-left: 295px;
+    display:block;
+    height:100%;
+    width:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.pharmacy{
+    background:#a5b8e0;
+    margin-left: 295px;
+    display:block;
+    height:100%;
+    width:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }

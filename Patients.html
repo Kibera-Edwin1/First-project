@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Patients</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section id="menu">
+            <div class="logo">
+                <img src="" alt="">
+                <h2>Dynamic</h2>
+            </div>
+            <div class="items">
+              <li><i></i><a href="Dashboard.html">Dashboard</a></li> 
+              <li><i></i><a href="Book Appointment.html">Book Appointment</a></li> 
+              <li><i></i><a href="Patients.html">Patients</a></li>
+              <li><i></i><a href="Doctors.html">Doctors</a> </li>
+              <li><i></i><a href="Appointments.html">Appointments</a> </li>
+              <li><i></i><a href="Pharmacy.html">Pharmacy</a> </li>
+              <li><i></i><a href="Accounts.html">Accounts</a> </li>
+            </div>
+        </section>
+        <div class="patients">
+            <form action="/Patients" method="post" name="Patients">
+                Patient ID:<input type="Patient id" name="patientId" placeholder="">
+                Patient Name:<input type="Patient name" name="patientName" placeholder="">
+                Phone Number:<input type="Phone number" name="phoneNumber" placeholder="(000)000-000">
+                Email:<input type="email" name="email" placeholder="">
+                Male:<input type="radio" name="genderRadioGroup" value="male">
+                Female:<input type="radio" name="genderRadioGroup" value="female">
+                Date Admitted:<input class="form-control" type="date" name="dateAdmitted" placeholder="">
+                Ward Number:<input type="ward number" name="wardNumber" placeholder="">
+                Doctor Assigned:<input type="Doctor assigned" name="doctorAssigned" placeholder="">
+                nurse Assigned:<input type="Nurse assigned" name="nurseAssigned" placeholder="">
+                Medical illness:<input type="medical illness" name="medicalIllness" placeholder="">
+                <input type="Submit" id="add" value="ADD">
+                <input type="reset" id="delete" value="DELETE">
+            </form>
+        </div>
+    </body>
+</html>
+

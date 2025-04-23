@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PATIENTS'FORM</title>
+       
+        <h1>PATIENTS'FORM</h1>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="form"> 
+            <form action="/BookAppointment" method="post" name="RegistrationForm" form id="RegistrationForm" >
+                <h2><b>PATIENT APPLICATION FORM</b></h2>
+                <div class="PersonalDetails">
+                    Surname:<input type ="Surname" id="Surname" name="patientSurname"  placeholder=""/>
+                
+                    Firstname: <input type ="Firstname" id="Firstname" name="firstName"  placeholder=""/>
+            
+                    Lastname:<input type ="Lastname" id="Lastname" name="lastName"  placeholder=""/><p/>
+                    Sex: <p/>Male:<input type="radio" id="Gender" name="genderRadioGroup" value="Male">
+                    Female:<input type="radio" id="Gender" name="genderRadioGroup" value="Female"><p/>
+                    Marital Status:<p/> 
+                    <select name="maritalStatus">
+                        <option value=""></option>
+                        <option value="Married" name="married">Married</option>
+                        <option value="Single" name="single">Single</option>
+                        <option value="complicated" name="complicated">Complicated</option>
+                    </select>
+                </div>
+
+               
+                <div class="Contact Info">
+                    Email Address:<input type="Email address" id="email" name="email"  placeholder="ex. myname@gmail.com"/>
+                Phone Number:<input type="Phone Number" id="PhoneNumber" name="number" placeholder="(000) 000 0000"/>
+                <p/>
+                </div>
+                <div class="Location Info">
+                    Country of Origin:<input type="Country" id="Country" name="country" placeholder=""/>
+                County:<input type="county" name="county" id="County" placeholder=""/><p/>
+                Town:<input type="town" name="town" id="town" placeholder=""/>
+                Address:<input type="address" id="Address" name="address" placeholder="P.O.BOX ***"/><p/>
+                </div>
+                <div class="Kin Info">
+                    Next of Kin:<input type="lastname" id="Next of Kin" name="lastName" placeholder=""/>
+                Firstname:<input type="firstname" id="Next Fname" name="firstName" placeholder=""/><p/>
+                Phonenumber:<input type="phone Number" id="Next Pnumber" name="number" placeholder="(000) 000 0000"/>
+                Email Address:<input type="Email Address" id="Next E-address" name="email" placeholder="ex. myname@gmail.com"/><p/>
+                </div>
+                <div class="Medication">
+                    Are you under any medication:<p/>
+                Yes:<input type="radio" id="True" name="medicationRadioGroup" value="yes">
+                No:<input type="radio" id="True" name="medicationRadioGroup" value="No"><p/>
+                </div>
+                
+                Medical Issues:<input type="medical issues" name="medicalIssues" id="medicalissues" size="50"/>
+
+                <div class="wrap">
+                    <input type="Submit" value="SUBMIT">
+                    <input type="reset" value="Clear Form">
+                </div>
+                
+               </form>
+        </div>
+        <script>
+
+           // var RegistrationForm = document.getElementById(RegistrationForm);
+
+            //RegistrationForm.addEventListener("submit",(e) => {
+                //e.preventDefault();
+
+           // var Surname = document.getElementById(Surname);
+           // var Firstname = document.getElementById(Firstname);
+           // var Lastname = document.getElementById(Lastname);
+            //var email = document.getElementById(email);
+            //var PhoneNumber = document.getElementById(PhoneNumber);
+            //var Country = document.getElementById(Country);
+            //var County = document.getElementById(County);
+            //var town = document.getElementById(town);
+            //var Address = document.getElementById(Address);
+            //var NextofKin = document.getElementById(NextofKin);
+           //var NextFname = document.getElementById(NextFname);
+            //var NextPnumber = document.getElementById(NextPnumber);
+            //var NextEaddress = document.getElementById(NextEaddress);
+           // var medicalissues = document.getElementById(medicalissues);
+
+
+           // });
+           
+
+        </script>
+       
+    </body>
+</html>

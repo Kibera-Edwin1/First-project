@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <title>ZACK HOSPITAL LOGIN PAGE</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <h1>LOGIN</h1>
+        <h3>Enter your login credentials</h3>
+        <form action="/loginpage" method="post" form id="LoginForm">
+            <label for="username">UserName:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your Username" required>
+            <label for="Password">Password:</label>
+            <input type="Password" id="Password" name="Password" Placeholder="Enter your Password" required>
+            <div class="wrap">
+                <button type="Submit" >LOGIN</button>
+            </div>
+        </form>
+        <p>Not registered? <a href="signup.html" style ="text-decoration:none;">Create an account</a></p>
+    </div>
+    <script>
+        let LoginForm = document.getElementById("LoginForm")
+
+        LoginForm.addEventListener("submit", (e) =>{
+            e.preventDefault();
+
+            let username = document.getElementById("username");
+            let Password = document.getElementById("Password");
+
+            if(username.value == "" || Password.value == "") {
+                alert("WRONG  Username or Password!");
+            }else {
+                alert("Login successful");
+                window.location.assign("HOSPITAL.html")
+                console.log(
+                    `This form has a username of ${username.value} and password of${password.value}`
+                );
+
+                username.value = "";
+                password.value = "";
+            }
+        });
+            
+        
+    </script>
+    </body>
+ </html>

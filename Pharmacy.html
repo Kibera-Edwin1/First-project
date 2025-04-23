@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pharmacy</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section id="menu">
+            <div class="logo">
+                <img src="" alt="">
+                <h2>Dynamic</h2>
+            </div>
+            <div class="items">
+              <li><i></i><a href="Dashboard.html">Dashboard</a></li> 
+              <li><i></i><a href="Book Appointment.html">Book Appointment</a></li> 
+              <li><i></i><a href="Patients.html">Patients</a></li>
+              <li><i></i><a href="Doctors.html">Doctors</a> </li>
+              <li><i></i><a href="Appointments.html">Appointments</a> </li>
+              <li><i></i><a href="Pharmacy.html">Pharmacy</a> </li>
+              <li><i></i><a href="Accounts.html">Accounts</a> </li>
+            </div>
+        </section>
+        <div class="pharmacy">
+            <form action="/pharmacy" method="post" name="pharmacy">
+                Serial Number:<input type="serial number" name="serialNumber" placeholder="">
+                Batch Number:<input type="Batch number" name="batchNumber" placeholder="">
+                Drug Name:<input type="drugname" name="drugName" placeholder="">
+                Quantity:<input type="quantity" name="quantity" placeholder="">
+                Manufacture Date:<input class="form-control" type="date" name="manufactureDate" placeholder="">
+                Expire Date:<input class="form-control" type="date" name="expireDate" placeholder="">
+                Date Purchased:<input class="form-control" type="date"  name="datePurchased" placeholder="">
+                <input type="Submit" id="add" value="ADD">
+                <input type="reset" id="delete" value="DELETE">
+            </form>
+        </div>
+    </body>
+</html>

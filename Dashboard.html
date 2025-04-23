@@ -1,25 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Dashboard</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PATIENT DASHBOARD</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <form action="/dashboard" method="POST" name="dashboard" id="dashboard">
-            <section id="menu">
-                <h2>Dashboard</h2>
-            <nav>
-                    <li><i></i><a href="Add Equipment.html">Add Equipment</a></li>
-                    <li><i></i><a href="View Equipment.html">View Equipment</a></li>
-                    <li><i></i><a href="Report.html">Report</a></li>
-            </nav>
-            </section>
-
-            <div class="dash">
-                
-
+        <section id="menu">
+            <div class="logo">
+                <img src="" alt="">
+                <h2>Dynamic</h2>
             </div>
-        </form>
-       
+            <div class="items">
+              <li><i></i><a href="Dashboard.html">Dashboard</a></li> 
+              <li><i></i><a href="Book Appointment.html">Book Appointment</a></li> 
+              <li><i></i><a href="Patients.html">Patients</a></li>
+              <li><i></i><a href="Doctors.html">Doctors</a> </li>
+              <li><i></i><a href="Appointments.html">Appointments</a> </li>
+              <li><i></i><a href="Pharmacy.html">Pharmacy</a> </li>
+              <li><i></i><a href="Accounts.html">Accounts</a> </li>
+            </div>
+        </section>
+        <section id="interface">
+            <div class="navigation">
+                <div class="n1">
+                    <div class="search">
+                        <i class="far fa-search"></i>
+                        <input type="text" placeholder="search">
+                    </div>
+                </div>
+                <div class="profile">
+                 <i class="far fa-bell"></i>
+                 <img src="" alt="">    
+                </div>
+            </div>
+
+            <h3 classes="i-name">
+                Dashboard
+            </h3>
+            <div> 
+                <h3>Patients</h3>
+                <span>Patients</span>
+            </div>
+        </section>
     </body>
 </html>
