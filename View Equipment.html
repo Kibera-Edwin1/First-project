@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View Equipment</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section id="menu">
+            
+            <nav>
+                <li><i></i><a href="Add Equipment.html">Add Equipment</a></li>
+                <li><i></i><a href="View Equipment.html">View Equipment</a></li>
+                <li><i></i><a href="Report.html">Report</a></li>
+            </nav>
+        </section>
+            <h2>View Equipment</h2>
+            <form action="viewEquipment" method="post" name="viewEquipment">
+
+            <div class="view">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Serial No</th>
+                        <th>Type</th>
+                        <th>Brand</th>
+                        <th>Model No</th>
+                        <th>Status</th>
+                        <th>Department</th>
+                        <th>Floor</th>
+
+                    </tr>
+                    <tbody id="dataArea"></tbody>
+            </table>
+        </div>
+    </form>
+        <script>
+
+            // fetch('/addEquipment', {
+            //     method : 'POST',
+            //     body : JSON.stringify(jsonData),
+            //     headers : {
+            //         'content-Type': 'application/json'
+            //     }
+            // })
+            // .then(response => {
+            //     return response.json();
+            // })
+            // .then(data => {
+            //     userModalElement.hide();
+            //     getData();
+            // });
+
+            function getData(){
+                fetch('/viewEquipment')
+
+                .then(response => {
+                    return response.json();
+                })
+
+                .then(data => {
+                    console.log(data); 
+                    let html = "";
+                    if(data.length >0){
+                        data.map((row)=>{
+                            html += `
+                            <tr>
+                                <td>${row._id}</td>
+                                <td>${row.serialNumber}</td>
+                                <td>${row.type}</td>
+                                <td>${row.brandName}</td>
+                                <td>${row.modelNumber}</td>
+                                <td>${row.status}</td>
+                                <td>${row.department}</td>
+                                <td>${row.floor}</td>
+                                <td></td>
+                                </tr>
+                            `;
+                        });
+                    }else{
+                        html = "<tr>td colspan='4' class='text-center'>No Data Found</td></tr>";
+                    }
+                    document.getElementById("dataArea").innerHTML= html;
+                });
+            }
+
+            getData();
+        </script>
+    </body>
+</html>

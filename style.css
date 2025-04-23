@@ -1,0 +1,149 @@
+.signup{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+h1{
+    font-size: 2rem;
+    color: #666;
+    margin-bottom: 1.2rem;
+}
+.wrapper{
+    width: 330px;
+    padding: 2rem 1rem;
+    margin:50px auto;
+    background-color: #ffff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0,0,0.1);
+}
+#input{
+    width: 92%;
+    outline: none;
+    border: 1px solid #ffff;
+    padding: 12px 20px; 
+    margin-bottom: 10px; 
+    border-radius: 20px; 
+    background: #e4e4e4;
+}
+.wrap{
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    outline: none;
+    border: none;
+    width: 90%;
+    color: #ffff;
+    cursor: pointer;
+    background: rgb(17, 107, 143);
+}
+button:hover{
+    background:rgba(17, 107, 143, 0.877)
+}
+input:focus{
+    border: 1px solid rgb(192, 192, 192);
+}
+.login{
+    width: 370px;
+    padding: 2rem 1rem;
+    margin:50px auto;
+    background-color: #ffff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0,0,0.1); 
+}
+.group{
+    background-color: blueviolet;
+    width:100%;
+    justify-content: center;
+}
+nav{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between ;
+    height:5%;
+    background-color: blueviolet;
+
+    
+
+}
+body{
+    background-color: skyblue;
+}
+.container{
+    display:block;
+   border-radius: 10%;
+   max-height: max-content;
+   max-width: max-content;
+    align-items: center;
+    margin: auto;
+    
+    
+
+}
+#serial{
+    width: 700px;
+    height:35px;
+    border-radius: 5px;
+}
+#model{
+    width: 700px;
+    height: 35px;
+    border-radius: 5px;
+}
+#device{
+    width: 700px;
+    height: 35;
+    border-radius: 5px;
+}
+#status{
+    width: 700px;
+    height: 35px;
+    border-radius: 5px;
+}
+#dep{
+    width: 700px;
+    height: 35px;
+    border-radius: 5px;
+}
+#floor{
+    width: 700px;
+    height: 35px;
+    border-radius: 5px;
+}
+input:hover{
+    background-color:beige ;
+}
+select:hover{
+    background-color:beige ;
+}
+h2{
+    color: blue;
+}
+table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+}
+.view table tr{
+    background-color: aqua;
+    font-weight: bold;
+    text-align: left;
+}
+
+.view th,
+.view td {
+    padding: 12px 15px;
+}
+.view tbody tr{
+    border-bottom: 1px solid #dddd;
+}
+.dash{
+    background-color: rgb(138, 194, 194);
+}

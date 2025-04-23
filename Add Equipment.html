@@ -1,0 +1,89 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>Add Equipment</title>
+            <link rel="stylesheet" href="style.css">
+           
+        </head>
+        <body>
+            <nav>
+                <li><a href="Add Equipment.html">Add Equipment</a></li>
+                <li><a href="View Equipment.html">View Equipment</a></li>
+                <li><a href="Report.html">Report</a></li>
+           
+
+            </nav>
+         <form action="/addEquipment"  id="add" method="post" name="addEquipment">
+                      
+            <div class="container">
+                <h2>Add Equipment</h2>
+                Serial No:<br><input type="text" id="serial" name="serialNumber" placeholder=""><br>
+                Type:<br><select name="type" id="status" onclick="status()">
+                    <option value=""></option>
+                    <option value="Desktop">Desktop</option>
+                    <option value="Monitor">Monitor</option>
+                    <option value="Printer">Printer</option>
+                    <option value="UPS">UPS</option>
+                </select><br>
+                Is there a Monitor/Desktop used by the device<br>
+                Yes:<input type="radio" onclick="javascript :yesNoCheck();" name="yesNo" id="yesCheck">
+                No:<input type="radio" onclick="javascript :yesNoCheck();" name="yesNo" id="yesCheck"><br><br>
+                <div id="ifNo" style="visibility:hidden">
+                     Serial No:<br><input type="text" id="serial" name="serialNumber" placeholder=""><br>
+                    Type:<br><select name="type" id="status">
+                        <option value=""></option>
+                        <option value="Desktop">Desktop</option>
+                        <option value="Monitor">Monitor</option>
+                       
+                    </select><br>
+                    Brand:<br><input type="text" id="device" name="brandName" placeholder=""><br>
+                    Model No:<br><input type="text" id="model" name="modelNumber" placeholder=""><br>
+                    Status:<br><select name="status" id="status">
+                        <option value=""></option>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                        <option value="Obsolete">Obsolete</option>
+                    </select><br><br>
+                </div>
+                Brand:<br><input type="text" id="device" name="brandName" placeholder=""><br>
+                Model No:<br><input type="text" id="model" name="modelNumber" placeholder=""><br>
+                Status:<br><select name="status" id="status">
+                    <option value=""></option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                    <option value="Obsolete">Obsolete</option>
+                </select><br>
+                Department:<br><input type="text" id="dep" name="department" placeholder=""><br>
+                Floor:<br><input type="number" id="floor" name="floor" placeholder=""><br>
+                <input type="Submit" id="add" value="ADD">        
+            </div>
+
+            
+         </form>
+         <script>
+            function yesNoCheck()
+            {
+                if (document.getElementById('yesCheck').checked)
+            {
+                documment.getElementById('ifNo').style.visibility = 'visible';
+            }
+            else document.getElementById('ifNo').style.visibility = 'hidden';
+            }
+
+        function status ()
+        {
+            var status = document.getElementById("status");
+            if (status.value=="Desktop")
+        {
+            document.getElementById("yesCheck").style.visibility="hidden";
+        }
+        else
+        {
+            document.getElementById("yesCheck").style.visibility="visible"
+        }
+
+        }
+        </script>
+         
+        </body>
+    </html>

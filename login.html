@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="login">
+            <h1>LOGIN</h1>
+            <form action="/login" method="post" name="login" id="login">
+                <label for="username">Username:</label>
+                <input type="text" id="input" name="username" placeholder="" required>
+                <label for="password">Password:</label>
+                <input type="password" id="input" name="password" placeholder="" required> 
+                <img src="eye-close.PNG" id="eye-close icon">
+
+                <div class="wrap">
+                    <button type="Submit" >Login</button>
+                </div>
+            </form>
+
+            <p>Not registered? <a href="signup.html" style ="text-decoration:none;">Create an account</a></p>
+        </div>
+        <script>
+            let login = document.getElementById("login")
+
+            login.addEventListener("submit", (e) =>{
+                e.preventDefault();
+
+                let username = document.getElementById("username");
+                let password = document.getElementById("password");
+
+                if(username.value == "" ||  pasword.value == ""){
+                    alert("WRONG username or password!!")
+                }else{
+                    alert("Login successful");
+                    window.location.assign("Dashboard.html")
+                    console.log(
+                        `This form has a username of${username.value} and password of${password.value}`
+
+                    );
+
+                    username.value = "";
+                    password.value = "";
+                }
+            });
+        </script>
+    </body>
+</html>
