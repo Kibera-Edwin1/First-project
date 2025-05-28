@@ -2,5 +2,61 @@
 <html>
     <head>
         <title>viewPharmacy</title>
+         <link rel="stylesheet" href="style.css">
     </head>
+     <body>
+        <h2>View Doctors</h2>
+        <form action="/viewPharmacy" method="POST" name="viewPharmacy">
+            <div class="view">
+                <table>
+                    <tr>
+                        <th>Serial Number</th>
+                        <th>Batch Number</th>
+                        <th>Drug Name</th>
+                        <th>Quantity</th>
+                        <th>Manufacture Date</th>
+                        <th>Expiry Date</th>
+                        <th>Date Purchased</th>
+                    </tr>
+                    <tbody id="dataArea"></tbody>
+                </table>
+            </div>
+        </form>
+        <script>
+            function getData(){
+                fetch ('/viewPharmacy')
+
+                .then ( response => {
+                    return response.json();
+                })
+
+
+                .then(data=>{
+                    console.log(data);
+                    let html="";
+                    if(data.length>0){
+                        data.map((row)=>{
+                            html+=`
+                            <tr>
+                                <td>${row.serialNumber}</td>
+                                <td>${row.batchNumber}</td>
+                                <td>${row.drugName}</td>
+                                <td>${row.quantity}</td>
+                                <td>${row.manufactureDate}</td>
+                                <td>${row.expiryDate}</td>
+                                <td>${row.datePurchased}</td>
+                               
+                                </tr>
+                            `;
+                        });
+                    }else{
+                        html="<tr>td colspan='4' class='text-center'>No Data Found</td></tr>";
+                    }
+
+                    document.getElementById("dataArea").innerHTML=html;
+                });
+            }
+            getData();
+        </script>
+    </body>
 </html>
