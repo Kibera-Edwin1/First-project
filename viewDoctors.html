@@ -17,8 +17,44 @@
                         <th>Speciality</th>
                         <th>Date Employed</th>
                     </tr>
+                     <tbody id="dataArea"></tbody>
                 </table>
             </div>
         </form>
+        <script>
+            function getData(){
+                fetch ('/viewDoctors')
+
+                .then ( response => {
+                    return response.json();
+                })
+
+
+                .then(data=>{
+                    console.log(data);
+                    let html="";
+                    if(data.length>0){
+                        data.map((row)=>{
+                            html+=`
+                            <tr>
+                                <td>${row._id}</td>
+                                <td>${row.doctorName}</td>
+                                <td>${row.phoneNumber}</td>
+                                <td>${row.email}</td>
+                                <td>${row.speciality}</td>
+                                <td>${row.dateEmployed}</td>
+                               
+                                </tr>
+                            `;
+                        });
+                    }else{
+                        html="<tr>td colspan='4' class='text-center'>No Data Found</td></tr>";
+                    }
+
+                    document.getElementById("dataArea").innerHTML=html;
+                });
+            }
+            getData();
+        </script>
     </body>
 </html>
