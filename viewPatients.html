@@ -21,8 +21,48 @@
                         <th>Nurse Assigned</th>
 
                     </tr>
+                    <tbody id="dataArea"></tbody>
                 </table>
             </div>
         </form>
+         <script>
+            function getData(){
+                fetch ('/viewPatients')
+
+                .then ( response => {
+                    return response.json();
+                })
+
+
+                .then(data=>{
+                    console.log(data);
+                    let html="";
+                    if(data.length>0){
+                        data.map((row)=>{
+                            html+=`
+                            <tr>
+                                <td>${row.patientId}</td>
+                                <td>${row.patientName}</td>
+                                <td>${row.phoneNumber}</td>
+                                <td>${row.email}</td>
+                                <td>${row.genderRadioGroup}</td>
+                                <td>${row.dateAdmitted}</td>
+                                <td>${row.wardNumber}</td>
+                                 <td>${row.doctorAssigned}</td>
+                                <td>${row.nurseAssigned}</td>
+                                <td>${row.medicalIllness}</td>
+                               
+                                </tr>
+                            `;
+                        });
+                    }else{
+                        html="<tr>td colspan='4' class='text-center'>No Data Found</td></tr>";
+                    }
+
+                    document.getElementById("dataArea").innerHTML=html;
+                });
+            }
+            getData();
+        </script>
     </body>
 </html>
